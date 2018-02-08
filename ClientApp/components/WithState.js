@@ -1,23 +1,11 @@
 import React from 'react';
-import {
-    toDataSourceRequestString,
-    translateDataSourceResultGroups,
-    translateAggregateResults,
-    DataResult,
-    DataSourceRequestState
-} from '@progress/kendo-data-query';
-import { GridDataStateChangeEvent } from '@progress/kendo-react-grid';
+import { toDataSourceRequestString, translateDataSourceResultGroups } from '@progress/kendo-data-query';
 
 export function withState(WrappedGrid) {
     return class StatefullGrid extends React.Component {
         constructor(props) {
             super(props);
-            this.state = {
-                dataState: {
-                    skip: 0,
-                    take: 20
-                }
-            };
+            this.state = { dataState: { skip: 0, take: 20 } };
         }
 
         render() {
