@@ -1,0 +1,27 @@
+import * as React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
+import { GridColumn, Grid } from '@progress/kendo-react-grid';
+import { withState } from './WithState.js';
+
+const StatefullGrid = withState(Grid);
+
+class GridExample extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <StatefullGrid>
+          <GridColumn field="productId" title="Product Id" filter="numeric" />
+          <GridColumn field="productName" title="Product Name" />
+          <GridColumn field="unitsInStock" title="Units In Stock" filter="numeric" />
+        </StatefullGrid>
+      </div>
+    );
+  }
+}
+
+export default GridExample;
+
