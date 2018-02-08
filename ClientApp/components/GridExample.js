@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { GridColumn, Grid } from '@progress/kendo-react-grid';
 import { withState } from './WithState.js';
 
-const StatefullGrid = withState(Grid);
+const StatefulGrid = withState(Grid);
 
 class GridExample extends React.Component {
   constructor(props) {
@@ -13,11 +13,11 @@ class GridExample extends React.Component {
   render() {
     return (
       <div>
-        <StatefullGrid>
+        <StatefulGrid>
           <GridColumn field="productId" title="Product Id" filter="numeric" />
           <GridColumn field="productName" title="Product Name" />
           <GridColumn field="unitsInStock" title="Units In Stock" filter="numeric" />
-        </StatefullGrid>
+        </StatefulGrid>
       </div>
     );
   }
