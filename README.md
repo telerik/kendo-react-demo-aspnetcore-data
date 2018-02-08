@@ -1,60 +1,23 @@
+# Kendo UI for React: UI for ASP.NET Core  
 
+This repository contains a sample application which demonstrates how to use Kendo UI for React and UI for ASP.NET Core.
 
- Asp.Net Core React Starter Kit
-===================
+The [UI for ASP.NET Core](http://www.telerik.com/aspnet-core-ui) and [UI for ASP.NET MVC](http://www.telerik.com/aspnet-mvc) suites provide a `DataSourceRequest` model binder and a `ToDataSourceResult()` method that process operations such as paging, sorting, filtering, grouping, and aggregates.
 
-  This starter kit is baked for React App in Asp.Net Core environment using modern JavaScript.
-  Courtesy of  [aspnet/JavaScriptServices](https://github.com/aspnet/JavaScriptServices).
-
-  If you are the one who prefer JavaScript more than TypeScript, this Starter Kit is probably  for you.
-  Why another Starter Kit for Asp.Net Core React Application?
-    read this from [Eric Elliot](https://medium.com/@_ericelliott) : [You Might Not Need TypeScript](https://medium.com/javascript-scene/you-might-not-need-typescript-or-static-types-aa7cb670a77b)
-
-  for more about running SPA on Asp.Net Core, read this great blog [Angular, React, Knockout Apps On Asp.Net Core](http://blog.stevensanderson.com/2016/05/02/angular2-react-knockout-apps-on-aspnet-core/) from  [Steve Sanderson](https://github.com/SteveSandersonMS)
 ## Prerequisites:
 -  [.NET Core 2.0](https://www.microsoft.com/net/learn/get-started/windows) (or later) SDK
 -  [Node.js](https://nodejs.org/en/) version 6 (or later)
 
-## How to run the Starter Kit
- - Download the zip package or clone this repo
- - Install all the dependencies (packages)
-####
-       > yarn
-   or
+## Get Started
 
-       > npm intall
+1. Clone this repository by using your favorite Git client or by executing `git clone https://github.com/telerik/kendo-react-demo-aspnetcore-data.git`.
+1. Enter the project directory by running `cd kendo-react-demo-aspnetcore-data`.
+1. Run `npm install` to install the project dependencies.
+1. Set some environment variables - `setx ASPNETCORE_ENVIRONMENT "Development"`, `setx NODE_ENV "development"`.
+1. Run `dotnet run` to launch the application.
 
-  - Run the project
+## Further Help
 
-####    
-     > dotnet run
+For a detailed tutorial, refer to the article on [integrating the Kendo UI React with the UI for ASP.NET Core and UI for ASP.NET MVC](http://www.telerik.com/kendo-react-ui/components/dataquery/mvc-integration/) suites. The tutorial explains the necessary steps to benefit from these features in the context of a React application by using the Data Query helpers.
 
- - Set environment variable
-####
-    > setx ASPNETCORE_ENVIRONMENT "Development"
 
-   [Read more](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/) about  setting environment variable for asp.net core
-
-## Technologies Included:
-
-#### UI/State Management
-    react
-#### Styling
-     Bootstrap + Plain CSS
-     future plan: support sass(scss) + css modules
-#### New Age JavaScript
-     ES6/ES2017 with Babel
-#### Package management
-     yarn/npm
-#### Linting
-      ESLint + Stylelint
-#### Static Typing
-       Flow
-#### Build System
-       Webpack
-#### Unit Testing
-     future plan: support Jest + Enzyme
-#### Continuous Integration
-     N/A this will not be the concern of this starter kit
-#### Hosting
-     N/A this will not be the concern of this starter kit
