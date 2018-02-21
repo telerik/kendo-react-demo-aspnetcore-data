@@ -9,19 +9,13 @@ namespace reactSpa.Controllers
     [Route("api/Products")]
     public class ProductsController : Controller
     {
-        private readonly SampleContext _context;
-
-        public ProductsController(SampleContext context)
-        {
-            _context = context;
-        }
-
         // GET: api/Products
         [HttpGet]
         public JsonResult GetProducts([DataSourceRequest]DataSourceRequest request)
         {
-            var result = Json(_context.Products.ToDataSourceResult(request));
-            return result;
+            // ToDataSourceResult works with IQueryable and thus Entity Framework could be used as a source
+            // instead of an in-memory list.
+            return Json(Products.Items.ToDataSourceResult(request));
         }
     }
 }

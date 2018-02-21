@@ -5,6 +5,7 @@ This repository contains a sample application which demonstrates how to use Kend
 The [UI for ASP.NET Core](http://www.telerik.com/aspnet-core-ui) and [UI for ASP.NET MVC](http://www.telerik.com/aspnet-mvc) suites provide a `DataSourceRequest` model binder and a `ToDataSourceResult()` method that process operations such as paging, sorting, filtering, grouping, and aggregates.
 
 ## Prerequisites:
+-  [React](https://reactjs.org/)
 -  [.NET Core 2.0](https://www.microsoft.com/net/learn/get-started/windows) (or later) SDK
 -  [Node.js](https://nodejs.org/en/) version 6 (or later)
 

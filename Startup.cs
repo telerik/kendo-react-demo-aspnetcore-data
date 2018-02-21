@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
 using reactSpa.Models;
 
 namespace reactSpa
@@ -30,11 +29,6 @@ namespace reactSpa
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
-            var dataDirectory = Path.Combine(WebRootPath, "App_Data");
-
-            var connection = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dataDirectory + System.IO.Path.DirectorySeparatorChar + "Sample.mdf;Integrated Security=True;";
-            services.AddDbContext<SampleContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

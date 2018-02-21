@@ -2,21 +2,92 @@
 
 namespace reactSpa.Models
 {
-    public partial class Products
+    public static class Products
     {
-        public Products()
-        {
-        }
+        public static List<Product> Items { get; }
 
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public int? SupplierId { get; set; }
-        public int? CategoryId { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public decimal? UnitPrice { get; set; }
-        public short? UnitsInStock { get; set; }
-        public short? UnitsOnOrder { get; set; }
-        public short? ReorderLevel { get; set; }
-        public bool Discontinued { get; set; }
+        static Products()
+        {
+            Items = new List<Product>
+            {
+                new Product(1, "Chai", 39),
+                new Product(2, "Chang", 17),
+                new Product(3, "Aniseed Syrup", 13),
+                new Product(4, "Chef Anton's Cajun Seasoning", 53),
+                new Product(5, "Chef Anton's Gumbo Mix", 0),
+                new Product(6, "Grandma's Boysenberry Spread", 120),
+                new Product(7, "Uncle Bob's Organic Dried Pears", 15),
+                new Product(8, "Northwoods Cranberry Sauce", 6),
+                new Product(9, "Mishi Kobe Niku", 29),
+                new Product(10, "Ikura", 31),
+                new Product(11, "Queso Cabrales", 22),
+                new Product(12, "Queso Manchego La Pastora", 86),
+                new Product(13, "Konbu", 24),
+                new Product(14, "Tofu", 35),
+                new Product(15, "Genen Shouyu", 39),
+                new Product(16, "Pavlova", 29),
+                new Product(17, "Alice Mutton", 0),
+                new Product(18, "Carnarvon Tigers", 42),
+                new Product(19, "Teatime Chocolate Biscuits", 25),
+                new Product(20, "Sir Rodney's Marmalade", 40),
+                new Product(21, "Sir Rodney's Scones", 3),
+                new Product(22, "Gustaf's Knäckebröd", 104),
+                new Product(23, "Tunnbröd", 61),
+                new Product(24, "Guaraná Fantástica", 20),
+                new Product(25, "NuNuCa Nuß-Nougat-Creme", 76),
+                new Product(26, "Gumbär Gummibärchen", 15),
+                new Product(27, "Schoggi Schokolade", 49),
+                new Product(28, "Rössle Sauerkraut", 26),
+                new Product(29, "Thüringer Rostbratwurst", 0),
+                new Product(30, "Nord-Ost Matjeshering", 10),
+                new Product(31, "Gorgonzola Telino", 0),
+                new Product(32, "Mascarpone Fabioli", 9),
+                new Product(33, "Geitost", 112),
+                new Product(34, "Sasquatch Ale", 111),
+                new Product(35, "Steeleye Stout", 20),
+                new Product(36, "Inlagd Sill", 112),
+                new Product(37, "Gravad lax", 11),
+                new Product(38, "Côte de Blaye", 17),
+                new Product(39, "Chartreuse verte", 69),
+                new Product(40, "Boston Crab Meat", 123),
+                new Product(41, "Jack's New England Clam Chowder", 85),
+                new Product(42, "Singaporean Hokkien Fried Mee", 26),
+                new Product(43, "Ipoh Coffee", 17),
+                new Product(44, "Gula Malacca", 27),
+                new Product(45, "Rogede sild", 5),
+                new Product(46, "Spegesild", 95),
+                new Product(47, "Zaanse koeken", 36),
+                new Product(48, "Chocolade", 15),
+                new Product(49, "Maxilaku", 10),
+                new Product(50, "Valkoinen suklaa", 65),
+                new Product(51, "Manjimup Dried Apples", 20),
+                new Product(52, "Filo Mix", 38),
+                new Product(53, "Perth Pasties", 0),
+                new Product(54, "Tourtière", 21),
+                new Product(55, "Pâté chinois", 115),
+                new Product(56, "Gnocchi di nonna Alice", 21),
+                new Product(57, "Ravioli Angelo", 36),
+                new Product(58, "Escargots de Bourgogne", 62),
+                new Product(59, "Raclette Courdavault", 79),
+                new Product(60, "Camembert Pierrot", 19),
+                new Product(61, "Sirop d'érable", 113),
+                new Product(62, "Tarte au sucre", 17),
+                new Product(63, "Vegie-spread", 24),
+                new Product(64, "Wimmers gute Semmelknödel", 22),
+                new Product(65, "Louisiana Fiery Hot Pepper Sauce", 76),
+                new Product(66, "Louisiana Hot Spiced Okra", 4),
+                new Product(67, "Laughing Lumberjack Lager", 52),
+                new Product(68, "Scottish Longbreads", 6),
+                new Product(69, "Gudbrandsdalsost", 26),
+                new Product(70, "Outback Lager", 15),
+                new Product(71, "Flotemysost", 26),
+                new Product(72, "Mozzarella di Giovanni", 14),
+                new Product(73, "Röd Kaviar", 101),
+                new Product(74, "Longlife Tofu", 4),
+                new Product(75, "Rhönbräu Klosterbier", 125),
+                new Product(76, "Lakkalikööri", 57),
+                new Product(77, "Original Frankfurter grüne Soße", 32)
+            };
+        }
     }
 }
