@@ -67,7 +67,11 @@ module.exports = (env) => {
         },
       ]
     },
-    plugins: []
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"'
+    })
+    ]
   });
 
   // Configuration for client-side bundle suitable for running in browsers
