@@ -13,6 +13,8 @@ export function withState(WrappedGrid) {
                 <WrappedGrid
                     filterable={true}
                     sortable={true}
+                    resizable={true}
+                    reorderable={true}
                     pageable={{ pageSizes: true }}
                     {...this.props}
                     total={this.state.total}
