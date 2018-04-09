@@ -68,9 +68,9 @@ module.exports = (env) => {
       ]
     },
     plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"'
-    })
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"'
+        })
     ]
   });
 
