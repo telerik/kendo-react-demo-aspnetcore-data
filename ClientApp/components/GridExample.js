@@ -2,6 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { GridColumn, Grid } from '@progress/kendo-react-grid';
 import { withState } from './WithState.js';
+import { CommandCell }  from './my-command-cell';
 
 const StatefulGrid = withState(Grid);
 
@@ -13,10 +14,28 @@ class GridExample extends React.Component {
   render() {
     return (
       <div>
-        <StatefulGrid>
-          <GridColumn field="productId" title="Product Id" filter="numeric" />
-          <GridColumn field="productName" title="Product Name" />
-          <GridColumn field="unitsInStock" title="Units In Stock" filter="numeric" />
+        <StatefulGrid
+                filterable
+                sortlable
+                pageable
+                pageSize={10}
+                reordalable
+                resizable
+                editField="inEdit"
+          >
+          <GridColumn field="id" title="Employee Id" filter="numeric" editable={false}/>
+          <GridColumn field="name" title="Name" />
+          <GridColumn field="salary" title="Salary" filter="numeric" editor="numeric" />
+          <GridColumn
+              groupable={false}
+              sortable={false}
+              filterable={false}
+              resizable={false}
+              field="_command"
+              title=" "
+              width="180px"
+              cell={CommandCell}
+          />
         </StatefulGrid>
       </div>
     );
