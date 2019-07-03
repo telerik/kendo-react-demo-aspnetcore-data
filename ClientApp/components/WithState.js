@@ -65,18 +65,22 @@ export function withState(WrappedGrid) {
         }
 
         cancelEdit = (item) => {
-            let data = this.state.result
+            this.itemInEdit = {};
+            let data = this.state.result;
             let mappedData = data.map(record => {
-                if (record.id === this.itemInEdit.id) {
+                if (record.Id === this.itemInEdit.Id) {
                     record = this.itemInEdit;
-                    record.inEdit = false
+                    record.itemInEdit = false
+                } else {
+                    record.itemInEdit = false;
                 }
                 return record
-            })
+            });   
+            let filteredData = mappedData.filter(obj => Object.keys(obj).includes("Id"));
             this.setState({
-                result: mappedData
+                result: filteredData
             })
-        }
+        };
 
         deleteItem = (item) => {
             const queryStr = this.serialize(item); // Serialize the state
