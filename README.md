@@ -1,24 +1,33 @@
-# Kendo UI for React: UI for ASP.NET Core  
+# KendoReactEFCoreDemo
 
-This repository contains a sample application which demonstrates how to use Kendo UI for React and UI for ASP.NET Core.
-
-The [UI for ASP.NET Core](http://www.telerik.com/aspnet-core-ui) and [UI for ASP.NET MVC](http://www.telerik.com/aspnet-mvc) suites provide a `DataSourceRequest` model binder and a `ToDataSourceResult()` method that process operations such as paging, sorting, filtering, grouping, and aggregates.
-
-## Prerequisites:
--  [React](https://reactjs.org/)
--  [.NET Core 2.0](https://www.microsoft.com/net/learn/get-started/windows) (or later) SDK
--  [Node.js](https://nodejs.org/en/) version 6 (or later)
+A demo that shows how to use the Progress Telerik UI for React Grid with an EntityFramework backend and CRUD operations.
 
 ## Get Started
+To run the example:
 
-1. Clone this repository by using your favorite Git client or by executing `git clone https://github.com/telerik/kendo-react-demo-aspnetcore-data.git`.
-1. Enter the project directory by running `cd kendo-react-demo-aspnetcore-data`.
-1. Run `npm install` to install the project dependencies.
-1. Set some environment variables - `setx ASPNETCORE_ENVIRONMENT "Development"`, `setx NODE_ENV "development"`.
-1. Run `dotnet run` to launch the application.
+1. Open `ReactWithRestApi.sln` solution in Visual Studio (or VSCode)
+    - The solution has two projects; the React project (client), the .NET project (server)
+2. Open the `ReactWithRestApi.Client` folder in your favorite terminal and run `npm install` to restore its dependenices
+3. Update the Telerik NuGet server credentials
+    - Option 1 (recommended) - Edit the **nuget.config** file and replace `%TELERIK_NUGET_KEY%` with your own Telerik NuGet Key ([generate a new one here](https://www.telerik.com/account/downloads/nuget-keys))
+    - Option 2 (Visual Studio) - Add the Telerik NuGet server to your Visual Studio package sources ([one-time instructions here](https://docs.telerik.com/aspnet-core/installation/nuget-install#setup-with-the-nuget-package-manager))
+4. Make sure the **HTTPS** profile is selected as the default target and start debugging
 
-## Further Help
+## Runtime
 
-For a detailed tutorial, refer to the article on [integrating the Kendo UI React with the UI for ASP.NET Core and UI for ASP.NET MVC](http://www.telerik.com/kendo-react-ui/components/dataquery/mvc-integration/) suites. The tutorial explains the necessary steps to benefit from these features in the context of a React application by using the Data Query helpers.
+After starting the app, the following things will occurr:
 
+1. The .NET backend will start first and a new brower tab will open and show the API's swagger page.
+2. A new command window will open and start the client app. You may need to click/copy the URL to open the client app in the browser.
 
+## Further Assistance
+
+Depending on the topic you need assistance with, there are two locations to get assistance.
+
+- .NET - For more information about launching and running a SPA app in Visual Studio:
+    - [Tutorial ASP.NET Core with React | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
+    - [.NET Discord | Live Chat with .NET team and other .NET community members](http://aka.ms/dotnet-discord)
+- Kendo - If you have any questions about the client-side KendoReact Grid:
+    - [Technical Support](https://www.telerik.com/account/support-center/contact-us/technical-support)
+    - [Forums](https://www.telerik.com/forums/kendo-ui-react/kendoreact-general-discussions)
+    - [License Support](https://www.telerik.com/account/support-center/contact-us/licensing-support)
