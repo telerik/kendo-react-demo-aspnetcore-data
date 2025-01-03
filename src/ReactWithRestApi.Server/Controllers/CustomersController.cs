@@ -1,3 +1,6 @@
+// Suppress the warning about unused query parameter actions.
+#pragma warning disable ASP0018
+
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Microsoft.AspNetCore.Mvc;
@@ -6,10 +9,9 @@ using ReactWithRestApi.Server.Models;
 
 namespace ReactWithRestApi.Server.Controllers;
 
-// IMPORTANT: To recreate what I did here for your SQL server's context follow this tutorial https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio
-// That shows you how to make the connection to the SQL server using EntityFramework Core.
+// Note: To recreate the EntityFrameworkCore prerequisite, follow https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0
 //
-// Once that is working, now you can focus on the Kendo topics:
+// Once that is working, you can change focus on the Kendo-related topics:
 // A - accept the Kendo Grid's DataSourceRequest in each method
 // B - return the Kendo Grid's DataSourceResult from each method
 // This is what I have done below.
@@ -106,3 +108,5 @@ public class CustomersController(SalesDbContext dbContext) : ControllerBase
         return currentPageOfCustomers;
     }
 }
+
+#pragma warning restore ASP0018
